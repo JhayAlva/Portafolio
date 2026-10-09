@@ -57,7 +57,7 @@ export class HomePage implements AfterViewInit, OnDestroy {
       tech: 'Angular, Tailwind CSS',
       date: '2025',
       description: 'Personal portfolio to showcase my skills and projects.',
-      link: 'https://portafolio-jeremie.netlify.app/',
+      link: 'https://portafoliojeremie.netlify.app/',
       image: '/assets/proyectos/angularPortafolio.jpg'
     },
     {

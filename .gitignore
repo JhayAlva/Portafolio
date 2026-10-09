@@ -46,3 +46,4 @@ Thumbs.db
 .env.*
 !.env.example
 /src/app/primeui-license.ts
+/.dist/
