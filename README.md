@@ -1,59 +1,35 @@
-# PortafolioAngular
+# Jeremie Klose — Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.2.
+Personal portfolio built with Angular 22, TypeScript 6, Three.js, PrimeNG 22 and Tailwind CSS. Features a scroll-driven 3D space journey and a downloadable CV.
 
-## Development server
+## Local setup
 
-To start a local development server, run:
+Use Node.js 24.15 or newer within the Node 24 release line.
 
-```bash
-ng serve
+```powershell
+npm ci
+Copy-Item .env.example .env
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Add your own valid PrimeUI Community or Commercial license to `.env`:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+PRIMEUI_LICENSE=your_license_key
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The local `.env` and generated TypeScript license file are excluded from Git. The npm lifecycle scripts generate the license configuration before starting, building or testing. Without a key, the project still builds but PrimeNG displays its license notice. Obtain a license at https://primeui.store/.
 
-```bash
-ng generate --help
+```powershell
+npm run start
 ```
 
-## Building
+On Windows this opens Google Chrome at http://localhost:4200/. On other platforms use `npm run prestart` followed by `npx ng serve --open`.
 
-To build the project run:
+## Build and tests
 
-```bash
-ng build
+```powershell
+npm run build
+npm test -- --watch=false --browsers=ChromeHeadless
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Production output: `dist/portafolioAngular/browser`. For CI or hosting, set `PRIMEUI_LICENSE` as an environment variable and build with `npm run build`.

@@ -1,0 +1,12 @@
+:host { position: relative; z-index: 10; }
+.space-nav { position: fixed; top: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 22px clamp(20px,5vw,80px); background: linear-gradient(#050710f2,#05071080,transparent); }
+a { text-decoration: none; }
+.wordmark { display: flex; align-items: center; color: #edf4ff; font-size: 30px; font-weight: 800; letter-spacing: -2px; }
+.wordmark-dot { color: #adbefb; }
+.wordmark-label { font: 10px/1.2 monospace; letter-spacing: 2px; margin-left: 16px; }
+nav { display: flex; gap: 27px; }
+nav a { color: #b2baca; font-size: 12px; transition: color .2s; }
+nav a:hover { color: white; }
+.nav-contact { color: #e9eeff; border: 1px solid #b8c5fc44; padding: 10px 17px; border-radius: 30px; font-size: 12px; }
+.nav-contact span { margin-left: 15px; }
+@media(max-width:800px) { nav { display:none; } .wordmark-label { font-size:9px; } .space-nav { padding:16px 20px; } }

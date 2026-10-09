@@ -1,0 +1,5 @@
+:host { position:relative; z-index:1; }
+.mission-footer { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:28px 5vw; border-top:1px solid #a8b9e321; background:#050710aa; color:#9ca8bc; font-size:11px; }
+.mission-footer span:nth-child(2) { font:9px monospace; letter-spacing:2px; }
+a { color:#ced9f4; text-decoration:none; }
+@media(max-width:700px) { .mission-footer { flex-wrap:wrap; } .mission-footer span:nth-child(2) { order:3; width:100%; font-size:8px; } }

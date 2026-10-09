@@ -1,0 +1,8 @@
+:host { display:block; }
+:host ::ng-deep .p-card { background:transparent; border:none; box-shadow:none; color:#edf3ff; }
+:host ::ng-deep .p-card-body { padding:0; }
+:host ::ng-deep .p-card-subtitle { color:#a3b9eb; font:11px monospace; margin:10px 0 18px; }
+:host ::ng-deep .p-timeline-event-connector { background:#b3c7fb30; }
+:host ::ng-deep .p-timeline-event-marker { background:#a4bdf7; border-color:#233458; }
+:host ::ng-deep .p-timeline-event-content p { color:#aeb9ce; }
+@media(max-width:767px) { :host ::ng-deep .p-timeline-event-opposite { flex:0; padding:0; } :host ::ng-deep .p-timeline-event-content { padding-right:0; } }

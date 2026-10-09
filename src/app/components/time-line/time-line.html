@@ -1,0 +1,39 @@
+<p-timeline [value]="events" [align]="timelineAlign">
+  <ng-template #content let-event>
+    <div class="w-full max-w-md mx-auto mb-4 p-4 md:p-6 shadow-lg rounded-xl">
+      <p-card [header]="event.status" [subheader]="event.date">
+        @if (event.status === 'Codepply') {
+        <p class="text-sm md:text-base mb-2">
+          Collaborative project with other developers as part of a training and professional initiative. Development and
+          implementation of key features such as project management, candidate dashboard, and real-time chat with
+          WebSockets. Involvement in both frontend and backend to ensure a smooth user experience, as well as modules
+          for recruiters focused on job offers and recruitment processes.
+        </p>
+        }
+        @if (event.status === 'Sanitesa') {
+        <p class="text-sm md:text-base mb-2">
+          Development and maintenance of an e-commerce online store for medical supplies aimed at hospitals and industry
+          professionals. Design and creation of optimized landing pages for specific campaigns based on the creative
+          team’s designs. Implementation of new features to improve user experience and site operability, ensuring
+          proper functionality and continuous updates.
+        </p>
+        }
+        @if (event.status === 'Bar El Encuentro') {
+        <p class="text-sm md:text-base mb-2">
+          End-to-end development of a web application for a restaurant with Angular on the frontend and Node.js on the
+          backend. Implementation of a menu management system allowing the owner to independently add, modify, or remove
+          dishes. Direct coordination with the client to define requirements and ensure the system’s adaptation to their
+          operational needs.
+        </p>
+        }
+        @if (event.status === 'Grupo ISV') {
+        <p class="text-sm md:text-base mb-2">
+          Maintenance and development of new features in an internal intranet application, collaborating within a
+          multidisciplinary team using Agile/Scrum methodology to enhance user experience (UX/UI). Resolution of issues
+          and improvements in legacy code, ensuring system stability and continuous evolution.
+        </p>
+        }
+      </p-card>
+    </div>
+  </ng-template>
+</p-timeline>

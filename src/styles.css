@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@plugin "tailwindcss-primeui";
+
+:root { color-scheme:dark; }
+html { scroll-behavior:smooth; background:#050710; }
+body { margin:0; background:radial-gradient(ellipse at 85% 15%,#12283c77,transparent 40%),radial-gradient(ellipse at 15% 60%,#35205655,transparent 45%),#050710; color:#edf3ff; font-family:Arial,Helvetica,sans-serif; overflow-x:clip; }
+body::before { content:''; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.45; background-image:radial-gradient(1px 1px at 15% 25%,white 50%,transparent 100%),radial-gradient(1px 1px at 65% 75%,#acc8f9 50%,transparent 100%),radial-gradient(1px 1px at 45% 55%,white 50%,transparent 100%); background-size:231px 271px,353px 389px,467px 419px; }
+#portfolio-content { position:relative; z-index:1; }
+#portfolio-content::before { content:''; position:absolute; inset:0; pointer-events:none; z-index:-1; background:linear-gradient(90deg,#05071088,transparent 85%); }
+a,button { -webkit-tap-highlight-color:transparent; }
+a:focus-visible,button:focus-visible { outline:2px solid #b5c7ff; outline-offset:5px; }
+.skip-link { position:fixed; top:12px; left:12px; z-index:30; transform:translateY(-150%); background:#dbe3ff; color:#101729; padding:12px 20px; border-radius:8px; }
+.skip-link:focus { transform:none; }
+::selection { background:#829fe455; color:white; }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
